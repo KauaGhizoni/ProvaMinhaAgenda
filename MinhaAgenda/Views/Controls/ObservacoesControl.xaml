@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MinhaAgenda.Views.Controls.ObservacoesControl">
+    <VerticalStackLayout Spacing="10" Margin="20,20,20,0">
+
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout Spacing="5">
+                <Label Text="Título" VerticalOptions="Center" WidthRequest="60" />
+                <Entry x:Name="entryTitulo" Placeholder="Título" VerticalOptions="Center">
+                    <Entry.Behaviors>
+                        <toolkit:TextValidationBehavior 
+                            x:Name="tituloValidator"
+                            Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                            MinimumLength="3"
+                        />
+                    </Entry.Behaviors>
+                </Entry>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout Spacing="5">
+                <Label Text="Descrição" VerticalOptions="Center" WidthRequest="60" />
+                <Editor x:Name="entryDescricao" Placeholder="Descrição" AutoSize="TextChanges" HeightRequest="100" />
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout Spacing="5">
+                <Label Text="Data" VerticalOptions="Center" WidthRequest="60" />
+                <DatePicker x:Name="datePicker" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout Spacing="5">
+                <Label Text="Hora" VerticalOptions="Center" WidthRequest="60" />
+                <TimePicker x:Name="timePicker" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Button x:Name="btnSave" Text="Salvar" Clicked="btnSave_Clicked" />
+        <Button x:Name="btnCancel" Text="Cancelar" Clicked="btnCancel_Clicked" />
+    </VerticalStackLayout>
+</ContentView>
