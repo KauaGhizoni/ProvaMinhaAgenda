@@ -7,7 +7,6 @@
 
     <controls:ObservacoesControl x:Name="observacoesCtrl"
                                  OnSave="observacoesCtrl_OnSave"
-                                 OnCancel="observacoesCtrl_OnCancel"
-                                 OnError="observacoesCtrl_OnError" />
+                                  />
 
 </ContentPage>

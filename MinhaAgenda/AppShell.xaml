@@ -9,8 +9,8 @@
     Title="MinhaAgenda">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate views:ContatosPage}"
-        Route="ContatosPage" />
+        Title="Observações"
+        ContentTemplate="{DataTemplate views:AdicionarObservacaoPage}"
+        Route="AdicionarObservacaoPage" />
 
 </Shell>
